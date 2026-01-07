@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce2c79dd17094bb498ea708637a668a7, type: 3}
+  m_Name: Level_One_Waves
+  m_EditorClassIdentifier: T_WM::StageWaves
+  EnemyList:
+  - enemyType: 0
+    enemyName: Frozen Monster
+    enemyPrefab: {fileID: 5993644171321349941, guid: 289d6adc7642a354fb618dfc1de7bffb, type: 3}
+  - enemyType: 0
+    enemyName: Forest Monster
+    enemyPrefab: {fileID: 1596618149441794156, guid: d9763baf8f3b2444f87d7cd6d8344656, type: 3}
+  - enemyType: 1
+    enemyName: Witch Monster
+    enemyPrefab: {fileID: 5182761547022972950, guid: 8ff14aa6a5657ef46b133de719a1e9b2, type: 3}
+  WavesData:
+  - enemyCount: 30
+    meleePercent: 50
+    rangedPercent: 50
+  - enemyCount: 50
+    meleePercent: 70
+    rangedPercent: 30
+  - enemyCount: 70
+    meleePercent: 35
+    rangedPercent: 65
+  - enemyCount: 80
+    meleePercent: 70
+    rangedPercent: 30
+  - enemyCount: 90
+    meleePercent: 70
+    rangedPercent: 67.8
+  - enemyCount: 80
+    meleePercent: 10
+    rangedPercent: 90
