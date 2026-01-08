@@ -67,7 +67,7 @@ namespace WM
 
 
 
-        OnWaveChanged?.Invoke(this.waveNumber);
+            OnWaveChanged?.Invoke(this.waveNumber);
 
             // Call SpawnHandler to spawn
             if (SpawnHandler.Instance != null)

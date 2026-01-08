@@ -43,11 +43,12 @@ namespace WM
             {
                 agent.isStopped = false;
                 agent.ResetPath();
+                FindNearestTarget();
+
             }
         }
         void Start()
         {
-            FindNearestTarget();
             // Auto-detect type from stopping distance
             if (agent.stoppingDistance > 5f)
             {
@@ -166,7 +167,6 @@ namespace WM
 
             currentHealth -= damage;
 
-            Debug.Log($"{gameObject.name} took {damage} damage. HP: {currentHealth}/{maxHealth}");
 
             if (currentHealth <= 0)
             {
@@ -204,23 +204,23 @@ namespace WM
                 SpawnHandler.Instance.OnEnemyDied(gameObject);
             }
 
-            // Deactivate after death animation plays
-            StartCoroutine(DeactivateAfterAnimation());
-        }
-
-
-        private IEnumerator DeactivateAfterAnimation()
-        {
-            yield return new WaitForSeconds(myDieAnimationTime);
             gameObject.SetActive(false);
+            // Deactivate after death animation plays
+            //StartCoroutine(DeactivateAfterAnimation());
         }
+
+
+        //private IEnumerator DeactivateAfterAnimation()
+        //{
+        //    yield return new WaitForSeconds(myDieAnimationTime);
+        //}
 
 
         public void ResetEnemy()
         {
             // Reset health
             currentHealth = maxHealth;
-            isDead = false;
+            
 
             // Clear target cache
             currentTarget = null;
@@ -237,7 +237,7 @@ namespace WM
                 animator.Update(0f);
             }
 
-
+            isDead = false;
 
         }
 

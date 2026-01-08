@@ -156,7 +156,7 @@ namespace WM
             if (timerScale >= updateRate)
             {
                 float fps = frameCount / timerScale;
-                string color = GetFPSColor(frameCount);
+                string color = GetFPSColor(fps);
                 fpsText.text = $"<color={color}>FPS: {Mathf.RoundToInt(fps)}</color>";
 
                 frameCount = 0;
