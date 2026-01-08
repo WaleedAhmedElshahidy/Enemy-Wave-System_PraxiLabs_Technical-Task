@@ -127,30 +127,6 @@ Scripts/Data/         StageWaves (ScriptableObject), WaveData, Enemy
 Prefabs/Enemies/      Chronic Knight, Chronic Archer
 Settings/             URP-HighQuality asset and renderer
 
-===============================================================================
-KEY IMPLEMENTATION NOTES
-Wave Calculation:
-
-Wave groups defined in StageWaves ScriptableObject
-Each group: startEnemiesCount, addedPerWave, wavesEffectedCount
-OnValidate() auto-calculates waveGroupStart, FirstWaveEqual, isInfinite
-
-Target Acquisition:
-
-Cached lists refreshed every 0.5-1 second (not per frame)
-60x performance improvement over per-frame queries
-
-Component Caching:
-
-Store references when target acquired
-Clear when target lost or destroyed
-Zero GetComponent in Update loops
-
-State Management:
-
-Track state in booleans (isAttacking, isDead)
-Call Animator.SetBool only on transitions
-90% reduction in animator calls
 
 ===============================================================================
 END OF DOCUMENTATION
