@@ -22,22 +22,16 @@ MonoBehaviour:
   - enemyType: 1
     enemyName: Witch Monster
     enemyPrefab: {fileID: 5182761547022972950, guid: 8ff14aa6a5657ef46b133de719a1e9b2, type: 3}
-  WavesData:
-  - enemyCount: 30
-    meleePercent: 50
-    rangedPercent: 50
-  - enemyCount: 50
-    meleePercent: 70
-    rangedPercent: 30
-  - enemyCount: 70
-    meleePercent: 35
-    rangedPercent: 65
-  - enemyCount: 80
-    meleePercent: 70
-    rangedPercent: 30
-  - enemyCount: 90
-    meleePercent: 70
-    rangedPercent: 67.8
-  - enemyCount: 80
-    meleePercent: 10
-    rangedPercent: 90
+  wavesData:
+  - isInfinite: 0
+    waveGroupStart: 1
+    FirstWaveEqual: 30
+    wavesEffectedCount: 3
+    startEnemiesCount: 10
+    addedPerWave: 20
+  - isInfinite: 1
+    waveGroupStart: 4
+    FirstWaveEqual: 80
+    wavesEffectedCount: 0
+    startEnemiesCount: 70
+    addedPerWave: 10
